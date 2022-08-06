@@ -1,0 +1,45 @@
+<div class="container">
+    <div *ngIf="this.courses.length===0; else elseBlock">No Courses to show</div>
+    <ng-template #elseBlock>
+        <h1 class="text-center mb-3">List of Courses</h1>
+
+
+        <h1 class = "text-center">5 star</h1>
+        <div *ngFor="let course of courses">
+            <div *ngIf="this.course.rating===5">
+                <h3>{{course.name}}</h3>
+                <p>Instructor = {{course.instructor}}</p>
+                <p>Level = {{course.level}}</p>
+                <p>Lang = {{course.lang}}</p>
+                <p>Rating = {{course.rating}}</p>
+                <p>Desc = {{course.desc}}</p>
+            </div>
+        </div>
+
+        <h1 class = "text-center">4 star</h1>
+        <div *ngFor="let course of courses">
+            <div *ngIf="this.course.rating===5">
+                <h3>{{course.name}}</h3>
+                <p>Instructor = {{course.instructor}}</p>
+                <p>Level = {{course.level}}</p>
+                <p>Lang = {{course.lang}}</p>
+                <p>Rating = {{course.rating}}</p>
+                <p>Desc = {{course.desc}}</p>
+            </div>
+        </div>
+
+
+        <h1 class = "text-center">3 star or less</h1>
+        <div *ngFor="let course of courses">
+            <div *ngIf="this.course.rating===3">
+                <h3>{{course.name}}</h3>
+                <p>Instructor = {{course.instructor}}</p>
+                <p>Level = {{course.level}}</p>
+                <p>Lang = {{course.lang}}</p>
+                <p>Rating = {{course.rating}}</p>
+                <p>Desc = {{course.desc}}</p>
+            </div>
+        </div>
+
+    </ng-template>
+</div>
